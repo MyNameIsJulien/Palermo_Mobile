@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Palermo Mobile</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- -->
+    <string name="btn_login">Einloggen</string>
+    <string name="btn_register">Registrieren</string>
+
+    <string name="lbl_username">Benutzername</string>
+    <string name="lbl_password">Passwort</string>
+
 </resources>

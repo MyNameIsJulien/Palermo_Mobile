@@ -12,6 +12,11 @@ public class Launch extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
+
+        getFragmentManager().beginTransaction()
+                            .replace(R.id.launcher_view, null)  // TODO: Replace null with actual class.
+                            .commit();
+
     }
 
 

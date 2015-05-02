@@ -3,6 +3,8 @@ package Core;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.apache.commons.io.IOUtils;
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.CookieHandler;
@@ -41,14 +43,7 @@ public class Networker extends AsyncTask<String, Void, String>{
             connection.setDoOutput(true);
             new PrintStream(connection.getOutputStream()).write(params[1].getBytes());
 
-            connection.getInputStream();
-
-            //
-            // TODO:
-            //  Make the method return the response as a string.
-            //
-
-            return null;
+            return IOUtils.toString(connection.getInputStream());
         }
         catch(MalformedURLException e)
         {

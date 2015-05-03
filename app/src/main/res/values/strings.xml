@@ -9,5 +9,7 @@
 
     <string name="lbl_username">Benutzername</string>
     <string name="lbl_password">Passwort</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

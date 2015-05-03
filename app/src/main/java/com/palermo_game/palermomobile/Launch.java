@@ -1,21 +1,24 @@
 package com.palermo_game.palermomobile;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Launch extends ActionBarActivity {
+public class Launch extends Activity { //ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
 
         getFragmentManager().beginTransaction()
-                            .replace(R.id.launcher_view, null)  // TODO: Replace null with actual class.
-                            .commit();
+                .add(R.id.launch_view, new fragment_launch())
+                .addToBackStack(null)
+                .commit();
 
     }
 

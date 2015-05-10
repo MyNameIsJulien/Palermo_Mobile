@@ -1,10 +1,12 @@
 package com.palermo_game.palermomobile;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,14 +87,17 @@ public class fragment_launch_login extends Fragment {
 
     public void logIn()
     {
+
+        Log.v("App.Login","Button clicked!");
+
         if(null == Session.logIn(edit_username.getText().toString(), edit_password.getText().toString()))
             return;
-
-        //
-        // TODO:
-        //  Implement logging in.
-        //  If log in succeeded than go to menu fragment, else notify user.
-        //
+        else
+        {
+            Log.v("App.Login","Starting intent");
+            Intent intent = new Intent(getActivity(), Main.class);
+            startActivity(intent);
+        }
     }
 
 

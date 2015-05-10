@@ -16,7 +16,7 @@ public class Launch extends Activity { //ActionBarActivity {
         setContentView(R.layout.activity_launch);
 
         getFragmentManager().beginTransaction()
-                .add(R.id.launch_view, new fragment_launch())
+                .replace(R.id.launch_view, new fragment_launch())
                 .addToBackStack(null)
                 .commit();
 
